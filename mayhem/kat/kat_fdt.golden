@@ -1,0 +1,33 @@
+node /
+  model = "mayhem-kat-board" (17)
+  compatible (21 bytes)
+  #address-cells = <0x1>
+  #size-cells = <0x1>
+node /chosen
+  bootargs = "console=ttyS0,115200" (21)
+node /cpus
+  #address-cells = <0x1>
+  #size-cells = <0x0>
+node /cpus/cpu@0
+  device_type = "cpu" (4)
+  reg = <0x0>
+  clock-frequency = <0x3b9aca00>
+node /soc
+  compatible = "simple-bus" (11)
+  #address-cells = <0x1>
+  #size-cells = <0x1>
+  ranges (0 bytes)
+node /soc/serial@44e09000
+  compatible = "ti,am3352-uart" (15)
+  reg (8 bytes)
+  interrupts = <0x48>
+  interrupt-parent = <0x1>
+  rts-gpios (12 bytes)
+  status = "okay" (5)
+node /soc/gpio@44e07000
+  compatible = "ti,omap4-gpio" (14)
+  gpio-controller (0 bytes)
+  #gpio-cells = <0x2>
+  reg (8 bytes)
+  phandle = <0x1>
+max phandle 1

@@ -1,0 +1,6 @@
+object prog
+prog xdp_pass_all sec=xdp insns=2 type=6
+prog sock_filter sec=socket insns=5 type=1
+map counters type=2 key=4 value=8 max=16
+map flows type=1 key=4 value=4 max=128
+btf yes

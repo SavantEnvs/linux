@@ -1,0 +1,12 @@
+types 4 size 16
+type 1 kind 1 name unsigned int
+type 2 kind 2 name 
+type 3 kind 4 name pkt_stats
+type 4 kind 8 name pkt_stats_t
+struct pkt_stats {
+	unsigned int count;
+	unsigned int *next;
+};
+
+typedef struct pkt_stats pkt_stats_t;
+

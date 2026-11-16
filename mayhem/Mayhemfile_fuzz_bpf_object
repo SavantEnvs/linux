@@ -1,0 +1,9 @@
+project: savantenvs/linux
+target: fuzz_bpf_object
+testsuite:
+  - https://$MAYHEM_DOMAIN/$MAYHEM_PROJECT/$MAYHEM_TARGET/testsuite.tar
+  - file://mayhem/fuzz_bpf_object/testsuite
+cmds:
+  - cmd: /mayhem/.mayhem-bin/fuzz_bpf_object
+    libfuzzer: true
+    timeout: 30

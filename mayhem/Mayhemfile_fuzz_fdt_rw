@@ -1,0 +1,9 @@
+project: savantenvs/linux
+target: fuzz_fdt_rw
+testsuite:
+  - https://$MAYHEM_DOMAIN/$MAYHEM_PROJECT/$MAYHEM_TARGET/testsuite.tar
+  - file://mayhem/fuzz_fdt_rw/testsuite
+cmds:
+  - cmd: /mayhem/.mayhem-bin/fuzz_fdt_rw
+    libfuzzer: true
+    timeout: 30
